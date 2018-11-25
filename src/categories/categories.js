@@ -5,7 +5,8 @@ import {
     TextField,
     Create, 
     SimpleForm,
-    TextInput
+    TextInput,
+    DeleteButton
 } from 'admin-on-rest';
 
 export const CategoryList = (props) => (
@@ -13,6 +14,7 @@ export const CategoryList = (props) => (
         <Datagrid>
             <TextField source="id" />
             <TextField source="name" />            
+            <DeleteButton />
         </Datagrid>
     </List>
 );

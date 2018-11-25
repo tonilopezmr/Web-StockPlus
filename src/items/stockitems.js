@@ -12,7 +12,8 @@ import {
     SimpleForm, 
     TextInput ,
     NumberField,
-    NumberInput
+    NumberInput,
+    DeleteButton
 } from 'admin-on-rest'
 
 export const ItemList = (props) => (
@@ -24,7 +25,8 @@ export const ItemList = (props) => (
             <NumberField source="quantity" />
             <ReferenceField label="Category" source="category" reference="categories">
                 <TextField source="name" />
-            </ReferenceField>        
+            </ReferenceField>      
+            <DeleteButton />
         </Datagrid>
     </List>
 )
