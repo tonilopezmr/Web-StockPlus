@@ -15,7 +15,8 @@ import {
     NumberInput,
     DeleteButton,
     ImageInput,
-    ImageField
+    ImageField,
+    UrlField
 } from 'admin-on-rest'
 
 export const ItemList = (props) => (
@@ -29,6 +30,8 @@ export const ItemList = (props) => (
             <ReferenceField label="Category" source="category" reference="categories">
                 <TextField source="name" />
             </ReferenceField>      
+            <UrlField source="referenceUrl" title="Purcharse URL" />
+            <UrlField source="datasheet" title="Datasheet URL" />
             <DeleteButton />
         </Datagrid>
     </List>
@@ -45,7 +48,9 @@ export const ItemCreate = (props) => (
             </ImageInput>
             <TextInput source="name" />
             <NumberInput source="price" />
-            <NumberInput source="quantity" />
+            <NumberInput source="quantity" defaultValue="1" />
+            <TextInput source="referenceUrl" lable="Reference URL" />
+            <TextInput source="datasheet" lable="Datasheet URL" />
         </SimpleForm>
     </Create>
 );
